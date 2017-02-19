@@ -1,0 +1,1 @@
+rofi -show run -lines "7" -bg "#282828" -hlbg "#00FFCC" -hlfg "#282828" -bc "#00FFCC" -fg "#ebdbb2" -font "monospace 12" -width "40"

@@ -1,0 +1,2 @@
+#!/bin/sh
+torify /home/allard/Documents/apps/Telegram/Telegram -startintray

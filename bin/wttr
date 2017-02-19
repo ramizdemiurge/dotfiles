@@ -1,0 +1,2 @@
+#!/bin/sh
+curl -H "Accept-Language: ru" wttr.in
