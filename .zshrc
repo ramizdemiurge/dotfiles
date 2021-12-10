@@ -2,7 +2,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-#export ZSH="/Users/ramizabdullaev/.oh-my-zsh"
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -10,9 +9,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
 #ZSH_THEME="lambda"
-#ZSH_THEME="bira"
+ZSH_THEME="bira"
 
 
 # Set list of themes to pick from when loading at random
@@ -73,7 +72,14 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker osx brew zsh-autosuggestions)
+plugins=(
+	git
+       	docker
+       	macos
+       	brew
+       	zsh-autosuggestions
+	    #octozen
+)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=bold"
 source $ZSH/oh-my-zsh.sh
@@ -101,9 +107,19 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias vimconfig="vim ~/.vimrc"
+alias ohmyzsh="cd ~/.oh-my-zsh"
+
+# tmux alias
+alias tmux="TERM=screen-256color-bce tmux"
 alias tmx="tmux attach"
+
+# youtube-dl alias
+alias youtube-dl-mp3="youtube-dl --extract-audio -f 'bestaudio[ext=mp3]' --no-playlist "
+alias youtube-dl-m4a="youtube-dl --extract-audio -f 'bestaudio[ext=m4a]' --no-playlist "
+alias youtube-dl-best="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' "
+alias youtube-dl-4k='echo -e "This will transcode the video from webm to h264 which could take a long time\n\n"; youtube-dl -f "bestvideo[ext=webm]+bestaudio[ext=m4a]" --recode-video mp4 '
 
 # prompt_context() {
 #  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT"]] then
