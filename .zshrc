@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="lambda"
-ZSH_THEME="bira"
+ZSH_THEME="intheloop"
 
 
 # Set list of themes to pick from when loading at random
@@ -81,7 +81,7 @@ plugins=(
 	    #octozen
 )
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=bold"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#83aefc,bg=none,bold"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -118,8 +118,15 @@ alias tmx="tmux attach"
 # youtube-dl alias
 alias youtube-dl-mp3="youtube-dl --extract-audio -f 'bestaudio[ext=mp3]' --no-playlist "
 alias youtube-dl-m4a="youtube-dl --extract-audio -f 'bestaudio[ext=m4a]' --no-playlist "
+alias youtube-dl-video="youtube-dl -f 'bestvideo[ext=mp4]' "
 alias youtube-dl-best="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' "
 alias youtube-dl-4k='echo -e "This will transcode the video from webm to h264 which could take a long time\n\n"; youtube-dl -f "bestvideo[ext=webm]+bestaudio[ext=m4a]" --recode-video mp4 '
+
+
+# service
+alias service="brew services info "
+alias service-start="brew services start "
+alias service-stop="brew services stop "
 
 # prompt_context() {
 #  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT"]] then
